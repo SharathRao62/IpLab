@@ -101,7 +101,7 @@ Output:
 ![image](https://user-images.githubusercontent.com/72368912/104435117-03ba1b00-55b2-11eb-97ae-495cc3f69357.png)
 
 
-4
+4 Develop a program to convert the color image to gray scale and binary image.
 
 import cv2
 image=cv2.imread('flower2.jpg')
@@ -119,7 +119,7 @@ Output:
 
 ![image](https://user-images.githubusercontent.com/72368912/104435739-bc805a00-55b2-11eb-9607-98cdd7abc5e5.png)
 
-5
+5 Develop a program to convert the given color image to different color spaces
 
 import cv2 
 image=cv2.imread('flower2.jpg') cv2.imshow('Original',image) 
