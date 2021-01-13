@@ -20,6 +20,8 @@ Output:
 
 2) Develop a program to perform linear transformations on an image: Scaling and Rotation
 
+The image of a linear transformation or matrix is the span of the vectors of the linear transformation. (Think of it as what vectors you can get from applying the linear transformation or multiplying the matrix by a vector.) It can be written as Im(A). Scaling:Image scaling is the process of resizing a digital image. Scaling down an image makes it smaller while scaling up an image makes it larger. Both raster graphics and vector graphics can be scaled, but they produce different results.
+
 a)Scaling
  
 import cv2 import numpy as np  
