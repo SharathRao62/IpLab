@@ -101,3 +101,19 @@ Output:
 ![image](https://user-images.githubusercontent.com/72368912/104435117-03ba1b00-55b2-11eb-97ae-495cc3f69357.png)
 
 
+4
+
+import cv2
+image=cv2.imread('flower2.jpg')
+cv2.imshow('Original',image)
+cv2.waitKey(0) 
+gray_image=cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
+cv2.imshow('Grayscale',gray_image) 
+cv2.waitKey(0) 
+sqr,binary_image=cv2.threshold(gray_image,172,240,cv2.THRESH_BINARY) 
+cv2.imshow('BinaryImage',binary_image) 
+cv2.waitKey(0) cv2.destroyAllWindows() 
+
+Output:
+
+
