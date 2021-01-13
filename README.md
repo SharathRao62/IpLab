@@ -248,7 +248,7 @@ Output:
 
 ![image](https://user-images.githubusercontent.com/72368912/104437041-54cb0e80-55b4-11eb-877d-971eb6d6ec63.png)
 
-# 7 Prpgram to find the Neighbourhood Matrix
+# 7 Find the Neighbourhood Matrix
 
 Program:
 
@@ -307,7 +307,7 @@ Output:
 ![image](https://user-images.githubusercontent.com/72368912/104444143-65cc4d80-55bd-11eb-8eae-a79e71e17a84.png)
 
 
-# 8 Prpgram to Calculate the Neighbourhood of Matrix
+# 8 Calculate the Neighbourhood of Matrix
 
 Program:
 
@@ -389,3 +389,6 @@ print('\n')
 Output:
 
 ![image](https://user-images.githubusercontent.com/72368912/104446136-0459ae00-55c0-11eb-8b76-ea78c7b3b8da.png)
+
+![image](https://user-images.githubusercontent.com/72368912/104446262-33701f80-55c0-11eb-816e-052f375365a8.png)
+
