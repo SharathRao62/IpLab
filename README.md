@@ -117,3 +117,7 @@ cv2.waitKey(0) cv2.destroyAllWindows()
 Output:
 
 
+![image](https://user-images.githubusercontent.com/72368912/104435739-bc805a00-55b2-11eb-9607-98cdd7abc5e5.png)
+
+
+
