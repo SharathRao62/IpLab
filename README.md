@@ -250,6 +250,9 @@ Output:
 
 # 7 Find the Neighbourhood Matrix
 
+Description:
+A pixel's neighborhood is some set of pixels, defined by their locations relative to that pixel, which is called the center pixel. The neighborhood is a rectangular block, and as you move from one element to the next in an image matrix, the neighborhood block slides in the same direction.
+
 Program:
 
 import numpy as np
@@ -308,6 +311,9 @@ Output:
 
 
 # 8 Calculate the Neighbourhood of Matrix
+
+Description:
+Given a M x N matrix, find sum of all K x K sub-matrix 2. Given a M x N matrix and a cell (i, j), find sum of all elements of the matrix in constant time except the elements present at row i & column j of the matrix. Given a M x N matrix, calculate maximum sum submatrix of size k x k in a given M x N matrix in O (M*N) time. Here, 0 < k < M, N.
 
 Program:
 
