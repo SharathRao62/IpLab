@@ -282,3 +282,6 @@ print(int(y[i][j]),end = '\t')
 print('\n')
 
 Output:
+
+![image](https://user-images.githubusercontent.com/72368912/104444143-65cc4d80-55bd-11eb-8eae-a79e71e17a84.png)
+
