@@ -98,3 +98,6 @@ cv2.waitKey(0)
 Output:
 
 
+![image](https://user-images.githubusercontent.com/72368912/104435117-03ba1b00-55b2-11eb-97ae-495cc3f69357.png)
+
+
