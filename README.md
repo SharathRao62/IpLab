@@ -7,17 +7,21 @@ Using OpenCV : OpenCV (Open Source Computer Vision) is a computer vision library
 Program:
 
 import cv2
+
 image=cv2.imread('flower2.jpg')
 
 cv2.imshow('Original',image) 
+
 cv2.waitKey(0) 
 
 gray_image=cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
 
 cv2.imwrite('flower1.jpg',gray_image)
+
 cv2.imshow('Grayscale',gray_image)
 
 cv2.waitKey(0) 
+
 cv2.destroyAllWindows() 
 
 
@@ -33,21 +37,28 @@ Description: Linear Transformation is type of gray level transformation that is 
 Description: Scaling operation increases/reduces size of an image.
 
 Program:
+
 import cv2 import numpy as np  
    
 FILE_NAME = 'flower2.jpg' try:  
      
     # Read image from disk.  
      
-img = cv2.imread(FILE_NAME)     
-(height, width) = img.shape[:2]     
+img = cv2.imread(FILE_NAME)  
+
+(height, width) = img.shape[:2]  
+
 cv2.imshow('gulaaaab.jpg', img)  
  
 res = cv2.resize(img, (int(width / 2), int(height / 2)), interpolation = cv2.INTER_CUBIC)      
 #Write image back to disk.     
-cv2.imshow('poooo.jpg', res)      
+
+cv2.imshow('poooo.jpg', res)     
+
 cv2.waitKey(0)    
+
 except IOError:  
+
 print ('Error while reading files !!!') 
 
 
@@ -63,15 +74,21 @@ Program:
 import cv2 import numpy as np  
    
 FILE_NAME = 'flower2.jpg' 
+
 try:  
+
 img = cv2.imread(FILE_NAME)  
+
 (rows, cols) = img.shape[:2]
+
 cv2.imshow('gulaaaab.jpg', img)  
    
-M = cv2.getRotationMatrix2D((cols / 2, rows / 2), 45, 1)    
+M = cv2.getRotationMatrix2D((cols / 2, rows / 2), 45, 1)   
+
 res = cv2.warpAffine(img, M, (cols, rows))  
    
 cv2.imshow('result.jpg', res)      cv2.waitKey(0)  except IOError:  
+
 print ('Error while reading files !!!') 
 
 
@@ -85,6 +102,7 @@ Description: Mean is most basic of all statistical measure. Means are often used
 
 Program:
 import cv2
+
 import os
 
 path='D:\Sharath\imagesip'
@@ -101,15 +119,21 @@ imgs.append(cv2.imread(fpat))
 
 i=0
 
-for im in imgs:                                                
+for im in imgs:            
 #for i in range(len(files)):
     
 cv2.imshow(files[i],imgs[i])  
+
 i=i+1;
+
 cv2.imshow('mean',im/i)
+
 mean=(im/i)
+
 print(mean)
+
 cv2.waitKey(0)
+
 #cv2.destroyAllWindows()
 
 Output:
@@ -129,15 +153,25 @@ BLACK AND WHITE IMAGE– The image which consist of only black and white color i
 
 Program:
 import cv2
+
 image=cv2.imread('flower2.jpg')
+
 cv2.imshow('Original',image)
+
 cv2.waitKey(0) 
+
 gray_image=cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
+
 cv2.imshow('Grayscale',gray_image) 
+
 cv2.waitKey(0) 
+
 sqr,binary_image=cv2.threshold(gray_image,172,240,cv2.THRESH_BINARY) 
+
 cv2.imshow('BinaryImage',binary_image) 
+
 cv2.waitKey(0) cv2.destroyAllWindows() 
+
 
 Output:
 
@@ -158,15 +192,25 @@ HSV color space: It stores color information in a cylindrical representation of 
 Program:
 
 import cv2
+
 image=cv2.imread('flower2.jpg')
+
 cv2.imshow('Original',image)
+
 cv2.waitKey(0)
+
 color_space1=cv2.cvtColor(image,cv2.COLOR_BGR2RGB)
+
 cv2.imshow('RGB',color_space1)
+
 cv2.waitKey(0)
+
 color_space2=cv2.cvtColor(image,cv2.COLOR_BGR2HSV)
+
 cv2.imshow('HSV',color_space2)
+
 cv2.waitKey(0)
+
 cv2.destroyAllWindows()
 
 
@@ -183,6 +227,7 @@ Two dimensional array is an array within an array. It is an array of arrays. In 
 Program:
 
 import numpy, cv2
+
 img=numpy.zeros([200,200,3])
 
 img[:,:,0]=numpy.ones([200,200])*255
@@ -190,9 +235,11 @@ img[:,:,1]=numpy.ones([200,200])*255
 img[:,:,2]=numpy.ones([200,200])*0
 
 cv2.imwrite('flower1.jpg',img)
+
 cv2.imshow('Color image',img)
 
 cv2.waitKey(0)
+
 cv2.destroyAllWindows()
 
 Output:
