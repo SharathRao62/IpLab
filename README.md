@@ -20,6 +20,7 @@ Output:
 
 2) Develop a program to perform linear transformations on an image: Scaling and Rotation
 
+a)Scaling
  
 import cv2 import numpy as np  
    
@@ -40,6 +41,23 @@ Output:
 
 ![image](https://user-images.githubusercontent.com/72368912/104433618-509cf200-55b0-11eb-8480-24c47dbe6f24.png)
 
+b)Rotation
+
+import cv2 import numpy as np  
+   
+FILE_NAME = 'flower2.jpg' 
+try:  
+    img = cv2.imread(FILE_NAME)  
+   
+    (rows, cols) = img.shape[:2]      cv2.imshow('gulaaaab.jpg', img)  
+   
+    M = cv2.getRotationMatrix2D((cols / 2, rows / 2), 45, 1)      res = cv2.warpAffine(img, M, (cols, rows))  
+   
+    cv2.imshow('result.jpg', res)      cv2.waitKey(0)  except IOError:  
+    print ('Error while reading files !!!') 
+
+
+Output:
 
 
 
