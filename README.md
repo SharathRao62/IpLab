@@ -231,7 +231,9 @@ import numpy, cv2
 img=numpy.zeros([200,200,3])
 
 img[:,:,0]=numpy.ones([200,200])*255
+
 img[:,:,1]=numpy.ones([200,200])*255
+
 img[:,:,2]=numpy.ones([200,200])*0
 
 cv2.imwrite('flower1.jpg',img)
