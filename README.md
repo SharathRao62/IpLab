@@ -5,9 +5,12 @@ Description: Grayscaling is the process of converting an image from other color 
 Using OpenCV : OpenCV (Open Source Computer Vision) is a computer vision library that contains various functions to perform operations on pictures or videos. It was originally developed by Intel but was later maintained by Willow Garage and is now maintained by Itseez. This library is cross-platform that is it is available on multiple programming languages such as Python, C++ etc.
 
 Program:
+
 import cv2 
-image=cv2.imread('flower2.jpg') cv2.imshow('Original',image) 
-cv2.waitKey(0) gray_image=cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
+image=cv2.imread('flower2.jpg') 
+cv2.imshow('Original',image) 
+cv2.waitKey(0) 
+gray_image=cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
 cv2.imwrite('flower1.jpg',gray_image)
 cv2.imshow('Grayscale',gray_image)
 cv2.waitKey(0) 
@@ -31,16 +34,16 @@ FILE_NAME = 'flower2.jpg' try:
      
     # Read image from disk.  
      
-   img = cv2.imread(FILE_NAME)     
-   (height, width) = img.shape[:2]     
-   cv2.imshow('gulaaaab.jpg', img)  
+img = cv2.imread(FILE_NAME)     
+(height, width) = img.shape[:2]     
+cv2.imshow('gulaaaab.jpg', img)  
  
-   res = cv2.resize(img, (int(width / 2), int(height / 2)), interpolation = cv2.INTER_CUBIC)      
-   # Write image back to disk.     
- cv2.imshow('poooo.jpg', res)      
+res = cv2.resize(img, (int(width / 2), int(height / 2)), interpolation = cv2.INTER_CUBIC)      
+# Write image back to disk.     
+cv2.imshow('poooo.jpg', res)      
 cv2.waitKey(0)    
 except IOError:  
-    print ('Error while reading files !!!') 
+print ('Error while reading files !!!') 
 
 
 Output:
@@ -51,6 +54,7 @@ b).Rotation
 Description: Images can be rotated to any degree clockwise or otherwise. We just need to define rotation matrix listing rotation point, degree of rotation and the scaling factor.
 
 Program:
+
 import cv2 import numpy as np  
    
 FILE_NAME = 'flower2.jpg' 
@@ -109,7 +113,7 @@ Output:
 ![image](https://user-images.githubusercontent.com/72368912/104435117-03ba1b00-55b2-11eb-97ae-495cc3f69357.png)
 
 
-4 Develop a program to convert the color image to gray scale and binary image.
+4).Develop a program to convert the color image to gray scale and binary image.
 
 Description:
 Types of an image
@@ -135,7 +139,7 @@ Output:
 
 ![image](https://user-images.githubusercontent.com/72368912/104435739-bc805a00-55b2-11eb-9607-98cdd7abc5e5.png)
 
-5 Develop a program to convert the given color image to different color spaces
+5).Develop a program to convert the given color image to different color spaces
 
 Description:
 Color spaces are a way to represent the color channels present in the image that gives the image that particular hue. There are several different color spaces and each has its own significance.
@@ -169,12 +173,13 @@ Output:
 ![image](https://user-images.githubusercontent.com/72368912/104436325-77a8f300-55b3-11eb-9caf-2479c4e298ce.png)
 
 
-6.Develop a program to create an image from 2D array (generate an array of random size).
+6).Develop a program to create an image from 2D array (generate an array of random size).
 
 Description:
 Python provides many ways to create 2-dimensional lists/arrays. However one must know the differences between these ways because they can create complications in code that can be very difficult to trace out.
 
 Program:
+
 import numpy, cv2
 img=numpy.zeros([200,200,3])
 
