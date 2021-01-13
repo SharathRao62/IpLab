@@ -119,5 +119,27 @@ Output:
 
 ![image](https://user-images.githubusercontent.com/72368912/104435739-bc805a00-55b2-11eb-9607-98cdd7abc5e5.png)
 
+5
+
+import cv2 
+image=cv2.imread('flower2.jpg') cv2.imshow('Original',image) 
+cv2.waitKey(0) color_space1=cv2.cvtColor(image,cv2.COLOR_BGR2RGB) cv2.imshow('RGB',color_space1)
+cv2.waitKey(0) 
+import cv2
+image=cv2.imread('flower2.jpg')
+cv2.imshow('Original',image)
+cv2.waitKey(0)
+color_space1=cv2.cvtColor(image,cv2.COLOR_BGR2RGB)
+cv2.imshow('RGB',color_space1)
+cv2.waitKey(0)
+color_space2=cv2.cvtColor(image,cv2.COLOR_BGR2HSV)
+cv2.imshow('HSV',color_space2)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+
+Output:
+
+
 
 
