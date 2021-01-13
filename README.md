@@ -49,18 +49,52 @@ import cv2 import numpy as np
    
 FILE_NAME = 'flower2.jpg' 
 try:  
-    img = cv2.imread(FILE_NAME)  
+img = cv2.imread(FILE_NAME)  
+(rows, cols) = img.shape[:2]
+cv2.imshow('gulaaaab.jpg', img)  
    
-    (rows, cols) = img.shape[:2]      cv2.imshow('gulaaaab.jpg', img)  
+M = cv2.getRotationMatrix2D((cols / 2, rows / 2), 45, 1)    
+res = cv2.warpAffine(img, M, (cols, rows))  
    
-    M = cv2.getRotationMatrix2D((cols / 2, rows / 2), 45, 1)      res = cv2.warpAffine(img, M, (cols, rows))  
-   
-    cv2.imshow('result.jpg', res)      cv2.waitKey(0)  except IOError:  
-    print ('Error while reading files !!!') 
+cv2.imshow('result.jpg', res)      cv2.waitKey(0)  except IOError:  
+print ('Error while reading files !!!') 
 
 
 Output:
 
 ![image](https://user-images.githubusercontent.com/72368912/104434051-c7d28600-55b0-11eb-8f14-a456658a5760.png)
+
+
+3.Develop a program to find the sum and mean of a set of images. Create ‘n’ number of images and read them from the directory and perform the operations.
+
+import cv2
+import os
+
+path='D:\Sharath\imagesip'
+
+imgs = []
+
+files= os.listdir(path)
+
+for file in files:
+    
+fpat=path+"\\"+file
+
+imgs.append(cv2.imread(fpat)) 
+
+i=0
+
+for im in imgs:                                                
+#for i in range(len(files)):
+    
+cv2.imshow(files[i],imgs[i])  
+i=i+1;
+cv2.imshow('mean',im/i)
+mean=(im/i)
+print(mean)
+cv2.waitKey(0)
+#cv2.destroyAllWindows()
+
+Output:
 
 
