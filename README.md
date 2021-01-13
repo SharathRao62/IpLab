@@ -18,10 +18,10 @@ Output:
 
 2) Develop a program to perform linear transformations on an image: Scaling and Rotation
 
-
-
 a)Scaling
- 
+Description:Scaling operation increases/reduces size of an image.
+
+Program:
 import cv2 import numpy as np  
    
 FILE_NAME = 'flower2.jpg' try:  
@@ -45,7 +45,9 @@ Output:
 ![image](https://user-images.githubusercontent.com/72368912/104433618-509cf200-55b0-11eb-8480-24c47dbe6f24.png)
 
 b)Rotation
+Description:Images can be rotated to any degree clockwise or otherwise. We just need to define rotation matrix listing rotation point, degree of rotation and the scaling factor.
 
+Program:
 import cv2 import numpy as np  
    
 FILE_NAME = 'flower2.jpg' 
