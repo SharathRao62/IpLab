@@ -248,7 +248,7 @@ Output:
 
 ![image](https://user-images.githubusercontent.com/72368912/104437041-54cb0e80-55b4-11eb-877d-971eb6d6ec63.png)
 
-# 7 Find the Neighbourhood Matrix
+# 7) Find the Neighbourhood Matrix
 
 Description:
 A pixel's neighborhood is some set of pixels, defined by their locations relative to that pixel, which is called the center pixel. The neighborhood is a rectangular block, and as you move from one element to the next in an image matrix, the neighborhood block slides in the same direction.
@@ -310,7 +310,7 @@ Output:
 ![image](https://user-images.githubusercontent.com/72368912/104444143-65cc4d80-55bd-11eb-8eae-a79e71e17a84.png)
 
 
-# 8 Calculate the Neighbourhood of Matrix
+# 8) Calculate the Neighbourhood of Matrix
 
 Description:
 Given a M x N matrix, find sum of all K x K sub-matrix 2. Given a M x N matrix and a cell (i, j), find sum of all elements of the matrix in constant time except the elements present at row i & column j of the matrix. Given a M x N matrix, calculate maximum sum submatrix of size k x k in a given M x N matrix in O (M*N) time. Here, 0 < k < M, N.
@@ -398,7 +398,7 @@ Output:
 
 ![image](https://user-images.githubusercontent.com/72368912/104446262-33701f80-55c0-11eb-816e-052f375365a8.png)
 
-# 9 Develop a program to implement Negative Transformation of a image
+# 9) Develop a program to implement Negative Transformation of a image
 
 Description:
 
@@ -488,7 +488,7 @@ Output:
 
 
 
-# Develop a program to implement Power Law Transformation
+# 10) Develop a program to implement Power Law Transformation
 
 Description:
 
@@ -513,7 +513,7 @@ Output:
 
 
 
-# 12 Develop program to display  Histogram of an image
+# 11) Develop program to display  Histogram of an image
 
 Description:
 
