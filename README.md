@@ -6,6 +6,7 @@ Using OpenCV : OpenCV (Open Source Computer Vision) is a computer vision library
 
 Program:
 
+```python
 import cv2
 
 image=cv2.imread('flower2.jpg')
@@ -23,7 +24,7 @@ cv2.imshow('Grayscale',gray_image)
 cv2.waitKey(0) 
 
 cv2.destroyAllWindows() 
-
+```
 
 Output:
 
