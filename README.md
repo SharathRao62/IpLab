@@ -87,7 +87,8 @@ M = cv2.getRotationMatrix2D((cols / 2, rows / 2), 45, 1)
 
 res = cv2.warpAffine(img, M, (cols, rows))  
    
-cv2.imshow('result.jpg', res)      cv2.waitKey(0)  except IOError:  
+cv2.imshow('result.jpg', res)    
+cv2.waitKey(0)  except IOError:  
 
 print ('Error while reading files !!!') 
 ```
