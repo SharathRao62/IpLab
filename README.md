@@ -421,5 +421,7 @@ plt.show()
 
 cv2.waitKey(0)
 
+Output:
+![image](https://user-images.githubusercontent.com/72368912/105327249-aeef5380-5bf4-11eb-9a18-87a5397ad295.png)
 
 
