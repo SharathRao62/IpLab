@@ -398,3 +398,28 @@ Output:
 
 ![image](https://user-images.githubusercontent.com/72368912/104446262-33701f80-55c0-11eb-816e-052f375365a8.png)
 
+# 9 Develop a program to implement Negative Transformation of a image
+
+Description:
+
+Program:
+
+import cv2 
+#import matplotlib.pyplot as plt
+
+img_Original = cv2.imread('flower2.jpg', 1) 
+  
+plt.imshow(img_Original) 
+plt.show() 
+
+cv2.waitKey(0)
+
+img_neg = 255 - img_Original 
+  
+plt.imshow(img_neg) 
+plt.show() 
+
+cv2.waitKey(0)
+
+
+
