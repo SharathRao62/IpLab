@@ -176,7 +176,8 @@ sqr,binary_image=cv2.threshold(gray_image,172,240,cv2.THRESH_BINARY)
 
 cv2.imshow('BinaryImage',binary_image) 
 
-cv2.waitKey(0) cv2.destroyAllWindows() 
+cv2.waitKey(0)
+cv2.destroyAllWindows() 
 ```
 
 ***Output:***
