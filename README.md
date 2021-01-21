@@ -51,7 +51,7 @@ img = cv2.imread(FILE_NAME)
 cv2.imshow('gulaaaab.jpg', img)  
  
 res = cv2.resize(img, (int(width / 2), int(height / 2)), interpolation = cv2.INTER_CUBIC)      
-#Write image back to disk.     
+
 
 cv2.imshow('poooo.jpg', res)     
 
