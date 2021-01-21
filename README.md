@@ -422,6 +422,111 @@ plt.show()
 cv2.waitKey(0)
 
 Output:
+
 ![image](https://user-images.githubusercontent.com/72368912/105327249-aeef5380-5bf4-11eb-9a18-87a5397ad295.png)
 
+# Contrast
+
+Description:
+
+Program:
+
+from PIL import Image, ImageEnhance
+img = Image.open("flower2.jpg")
+img.show()
+img=ImageEnhance.Color(img)
+img.enhance(2.0).show()
+
+Output:
+
+![image](https://user-images.githubusercontent.com/72368912/105328282-e4487100-5bf5-11eb-9205-9ae98a107fca.png)
+
+![image](https://user-images.githubusercontent.com/72368912/105328385-ff1ae580-5bf5-11eb-81c6-bc6418233bd4.png)
+
+
+# Thresholding Brightness
+
+Description:
+
+Program:
+
+import cv2  
+import numpy as np  
+
+image1 = cv2.imread('flower2.jpg')  
+
+img = cv2.cvtColor(image1, cv2.COLOR_BGR2GRAY)
+ 
+
+ret, thresh1 = cv2.threshold(img, 120, 255, cv2.THRESH_BINARY)
+ret, thresh2 = cv2.threshold(img, 120, 255, cv2.THRESH_BINARY_INV)
+ret, thresh3 = cv2.threshold(img, 120, 255, cv2.THRESH_TRUNC)
+ret, thresh4 = cv2.threshold(img, 120, 255, cv2.THRESH_TOZERO)
+ret, thresh5 = cv2.threshold(img, 120, 255, cv2.THRESH_TOZERO_INV)
+
+cv2.imshow('Binary Threshold', thresh1)
+cv2.imshow('Binary Threshold Inverted', thresh2)
+cv2.imshow('Truncated Threshold', thresh3)
+cv2.imshow('Set to 0', thresh4)
+cv2.imshow('Set to 0 Inverted', thresh5)
+
+if cv2.waitKey(0) & 0xff == 27:  
+    cv2.destroyAllWindows() 
+
+
+Output:
+
+![image](https://user-images.githubusercontent.com/72368912/105328576-3093b100-5bf6-11eb-9d0e-d44d6c975558.png)
+
+![image](https://user-images.githubusercontent.com/72368912/105328646-44d7ae00-5bf6-11eb-8ec0-83ec1da71826.png)
+
+![image](https://user-images.githubusercontent.com/72368912/105328742-60db4f80-5bf6-11eb-85b8-dab203058434.png)
+
+![image](https://user-images.githubusercontent.com/72368912/105328799-72245c00-5bf6-11eb-9945-957f30adde53.png)
+
+![image](https://user-images.githubusercontent.com/72368912/105328866-823c3b80-5bf6-11eb-9bf6-5a2f0106ea5b.png)
+
+
+
+# Develop a program to implement Power Law Transformation
+
+Description:
+
+Program:
+
+import numpy as np
+import cv2
+
+img = cv2.imread('flower2.jpg')
+
+gamma_two_point_two = np.array(255*(img/255)**2.2,dtype='uint8')
+
+gamma_point_four = np.array(255*(img/255)**0.4,dtype='uint8')
+
+img3 = cv2.hconcat([gamma_two_point_two,gamma_point_four])
+cv2.imshow('a2',img3)
+cv2.waitKey(0)
+
+Output:
+
+![image](https://user-images.githubusercontent.com/72368912/105329055-bca5d880-5bf6-11eb-986d-0331651d7ac3.png)
+
+
+
+# 12 Develop program to display  Histogram of an image
+
+Description:
+
+Program:
+
+import cv2
+from matplotlib import pyplot as plt
+img = cv2.imread('flower2.jpg',0)
+histr = cv2.calcHist([img],[0],None,[256],[0,256])
+plt.plot(histr)
+plt.show()
+
+Output:
+
+![image](https://user-images.githubusercontent.com/72368912/105329195-e4953c00-5bf6-11eb-96fc-00031e0be8b4.png)
 
