@@ -408,7 +408,7 @@ print('\n')
 
 # 9) Develop a program to implement Negative Transformation of a image
 
-Description:
+Description:The second linear transformation is negative transformation, which is invert of identity transformation. In negative transformation, each value of the input image is subtracted from the L-1 and mapped onto the output image.
 
 Program:
 ```python
@@ -436,7 +436,7 @@ cv2.waitKey(0)
 
 # Contrast
 
-Description:
+Description: Contrast can be simply explained as the difference between maximum and minimum pixel intensity in an image.
 
 Program:
 ```python
@@ -456,7 +456,7 @@ img.enhance(2.0).show()
 
 # Thresholding Brightness
 
-Description:
+Description: Brightness is a relative term. It depends on your visual perception. Since brightness is a relative term, so brightness can be defined as the amount of energy output by a source of light relative to the source we are comparing it to. In some cases we can easily say that the image is bright, and in some cases, its not easy to perceive.
 
 Program:
 ```python
@@ -500,7 +500,19 @@ if cv2.waitKey(0) & 0xff == 27:
 
 # 10) Develop a program to implement Power Law Transformation
 
-Description:
+Description: There are further two transformation is power law transformations, that include nth power and nth root transformation. These transformations can be given by the expression:
+
+s=cr^γ
+
+This symbol γ is called gamma, due to which this transformation is also known as gamma transformation.
+
+Variation in the value of γ varies the enhancement of the images. Different display devices / monitors have their own gamma correction, that’s why they display their image at different intensity.
+
+This type of transformation is used for enhancing images for different type of display devices. The gamma of different display devices is different. For example Gamma of CRT lies in between of 1.8 to 2.5, that means the image displayed on CRT is dark.
+
+Correcting gamma. s=cr^γ
+
+s=cr^(1/2.5)
 
 Program:
 ```python
@@ -526,7 +538,7 @@ cv2.waitKey(0)
 
 # 11) Develop program to display  Histogram of an image
 
-Description:
+Description: A histogram is a graph. A graph that shows frequency of anything. Usually histogram have bars that represent frequency of occurring of data in the whole data set. A Histogram has two axis the x axis and the y axis. The x axis contains event whose frequency you have to count. The y axis contains frequency. The different heights of bar shows different frequency of occurrence of data. Histogram of an image, like other histograms also shows frequency. But an image histogram, shows frequency of pixels intensity values. In an image histogram, the x axis shows the gray level intensities and the y axis shows the frequency of these intensities.
 
 Program:
 ```python
