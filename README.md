@@ -413,7 +413,7 @@ Description:The second linear transformation is negative transformation, which i
 Program:
 ```python
 import cv2 
-#import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 
 img_Original = cv2.imread('flower2.jpg', 1) 
   
