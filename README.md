@@ -42,9 +42,7 @@ Program:
 ```python
 import cv2 import numpy as np  
    
-FILE_NAME = 'flower2.jpg' try:  
-     
-    # Read image from disk.  
+FILE_NAME = 'flower2.jpg' try:    
      
 img = cv2.imread(FILE_NAME)  
 
