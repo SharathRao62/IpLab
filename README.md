@@ -33,24 +33,14 @@ Description: Scaling operation increases/reduces size of an image.
 Program:
 ```python
 import cv2 import numpy as np  
-   
 FILE_NAME = 'flower2.jpg' try:    
-     
 img = cv2.imread(FILE_NAME)  
-
 (height, width) = img.shape[:2]  
-
 cv2.imshow('gulaaaab.jpg', img)  
- 
 res = cv2.resize(img, (int(width / 2), int(height / 2)), interpolation = cv2.INTER_CUBIC)      
-
-
 cv2.imshow('poooo.jpg', res)     
-
 cv2.waitKey(0)    
-
 except IOError:  
-
 print ('Error while reading files !!!') 
 ```
 
@@ -64,24 +54,15 @@ Description: Images can be rotated to any degree clockwise or otherwise. We just
 Program:
 ```python
 import cv2 import numpy as np  
-   
 FILE_NAME = 'flower2.jpg' 
-
 try:  
-
 img = cv2.imread(FILE_NAME)  
-
 (rows, cols) = img.shape[:2]
-
 cv2.imshow('gulaaaab.jpg', img)  
-   
 M = cv2.getRotationMatrix2D((cols / 2, rows / 2), 45, 1)   
-
 res = cv2.warpAffine(img, M, (cols, rows))  
-   
 cv2.imshow('result.jpg', res)    
 cv2.waitKey(0)  except IOError:  
-
 print ('Error while reading files !!!') 
 ```
 
@@ -97,38 +78,22 @@ Program:
 
 ```python
 import cv2
-
 import os
-
 path='D:\Sharath\imagesip'
-
 imgs = []
-
 files= os.listdir(path)
-
 for file in files:
-    
 fpat=path+"\\"+file
-
 imgs.append(cv2.imread(fpat)) 
-
 i=0
-
 for im in imgs:            
 #for i in range(len(files)):
-    
 cv2.imshow(files[i],imgs[i])  
-
 i=i+1;
-
 cv2.imshow('mean',im/i)
-
 mean=(im/i)
-
 print(mean)
-
 cv2.waitKey(0)
-
 cv2.destroyAllWindows()
 ```
 
@@ -151,23 +116,14 @@ Program:
 
 ```python
 import cv2
-
 image=cv2.imread('flower2.jpg')
-
 cv2.imshow('Original',image)
-
 cv2.waitKey(0) 
-
 gray_image=cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
-
 cv2.imshow('Grayscale',gray_image) 
-
 cv2.waitKey(0) 
-
 sqr,binary_image=cv2.threshold(gray_image,172,240,cv2.THRESH_BINARY) 
-
 cv2.imshow('BinaryImage',binary_image) 
-
 cv2.waitKey(0)
 cv2.destroyAllWindows() 
 ```
@@ -193,25 +149,15 @@ Program:
 
 ```python
 import cv2
-
 image=cv2.imread('flower2.jpg')
-
 cv2.imshow('Original',image)
-
 cv2.waitKey(0)
-
 color_space1=cv2.cvtColor(image,cv2.COLOR_BGR2RGB)
-
 cv2.imshow('RGB',color_space1)
-
 cv2.waitKey(0)
-
 color_space2=cv2.cvtColor(image,cv2.COLOR_BGR2HSV)
-
 cv2.imshow('HSV',color_space2)
-
 cv2.waitKey(0)
-
 cv2.destroyAllWindows()
 ```
 
@@ -228,21 +174,13 @@ Two dimensional array is an array within an array. It is an array of arrays. In 
 Program:
 ```python
 import numpy, cv2
-
 img=numpy.zeros([200,200,3])
-
 img[:,:,0]=numpy.ones([200,200])*255
-
 img[:,:,1]=numpy.ones([200,200])*255
-
 img[:,:,2]=numpy.ones([200,200])*0
-
 cv2.imwrite('flower1.jpg',img)
-
 cv2.imshow('Color image',img)
-
 cv2.waitKey(0)
-
 cv2.destroyAllWindows()
 ```
 
@@ -258,51 +196,27 @@ A pixel's neighborhood is some set of pixels, defined by their locations relativ
 Program:
 ```python
 import numpy as np
-
 axis = 3
-
 x =np.empty((axis,axis))
-
 y = np.empty((axis+2,axis+2))
-
 s =np.empty((axis,axis))
-
 x = np.array([[1,4,3],[2,8,5],[3,4,6]])
-
-
 print('matrix\n')
-
 for i in range(0,axis):
-
 for j in range(0,axis):
-
 print(int(x[i][j]),end = '\t')
-
 print('\n')
-
 print('Temp matrix\n')
-
 for i in range(0,axis+2):
-
 for j in range(0,axis+2):
-
 if i == 0 or i == axis+1 or j == 0 or j==axis+1:
-
 y[i][j]=0
-
 else:
-
 #print("i = {}, J = {}".format(i,j))
-
 y[i][j]=x[i-1][j-1]
-           
-
 for i in range(0,axis+2):
-
 for j in range(0,axis+2):
-
 print(int(y[i][j]),end = '\t')
-
 print('\n')
 ```
 
@@ -320,75 +234,38 @@ Given a M x N matrix, find sum of all K x K sub-matrix 2. Given a M x N matrix a
 Program:
 ```Python
 import numpy as np
-
 axis = 3
-
-x =np.empty((axis,axis))
-
-y = np.empty((axis+2,axis+2))
-
-r=np.empty((axis,axis))
-
-s =np.empty((axis,axis))
-
+x =np.empty((axis,axis)) np.empty((axis+2,axis+2))
+r=np.empty((axis,axis))s =np.empty((axis,axis))
 x = np.array([[1,4,3],[2,8,5],[3,4,6]])
-
-
-print('Matrix\n')
-
-for i in range(0,axis):
-
-for j in range(0,axis):
-
+print('Matrix\n')for i in range(0,axis):
+for j in range(0,:
 print(int(x[i][j]),end = '\t')
-
 print('\n')
-
 print('Temp matrix\n')
-
 for i in range(0,axis+2):
-
 for j in range(0,axis+2):
-
 if i == 0 or i == axis+1 or j == 0 or j==axis+1:
-
 y[i][j]=0
-
 else:
  #print("i = {}, J = {}".format(i,j))
- 
 y[i][j]=x[i-1][j-1]  
-
 for i in range(0,axis+2):
-
 for j in range(0,axis+2):
-
 print(int(y[i][j]),end = '\t')
-
 print('\n')
-   
 print('Output calculated Neighbours of matrix\n')
-
 print('sum of Neighbours of matrix\n')
 for i in range(0,axis):
-
 for j in range(0,axis):    
-       
 r[i][j]=((y[i][j]+y[i][j+1]+y[i][j+2]+y[i+1][j]+y[i+1][j+2]+y[i+2][j]+y[i+2][j+1]+y[i+2][j+2]))
-
 print(r[i][j],end = '\t')
-       
 print('\n')
-
 print('\n Average of Neighbours of matrix\n')
-
 for i in range(0,axis):
 for j in range(0,axis):   
-       
 s[i][j]=((y[i][j]+y[i][j+1]+y[i][j+2]+y[i+1][j]+y[i+1][j+2]+y[i+2][j]+y[i+2][j+1]+y[i+2][j+2])/8)
-       
 print(s[i][j],end = '\t')
-
 print('\n')
 ```  
 
@@ -406,19 +283,13 @@ Program:
 ```python
 import cv2 
 import matplotlib.pyplot as plt
-
 img_Original = cv2.imread('flower2.jpg', 1) 
-  
 plt.imshow(img_Original) 
 plt.show() 
-
 cv2.waitKey(0)
-
 img_neg = 255 - img_Original 
-  
 plt.imshow(img_neg) 
 plt.show() 
-
 cv2.waitKey(0)
 ```
 
@@ -459,7 +330,6 @@ image1 = cv2.imread('flower2.jpg')
 
 img = cv2.cvtColor(image1, cv2.COLOR_BGR2GRAY)
  
-
 ret, thresh1 = cv2.threshold(img, 120, 255, cv2.THRESH_BINARY)
 ret, thresh2 = cv2.threshold(img, 120, 255, cv2.THRESH_BINARY_INV)
 ret, thresh3 = cv2.threshold(img, 120, 255, cv2.THRESH_TRUNC)
@@ -473,7 +343,7 @@ cv2.imshow('Set to 0', thresh4)
 cv2.imshow('Set to 0 Inverted', thresh5)
 
 if cv2.waitKey(0) & 0xff == 27:  
-    cv2.destroyAllWindows() 
+   cv2.destroyAllWindows() 
 ```
 
 ***Output:***
@@ -510,13 +380,9 @@ Program:
 ```python
 import numpy as np
 import cv2
-
 img = cv2.imread('flower2.jpg')
-
 gamma_two_point_two = np.array(255*(img/255)**2.2,dtype='uint8')
-
 gamma_point_four = np.array(255*(img/255)**0.4,dtype='uint8')
-
 img3 = cv2.hconcat([gamma_two_point_two,gamma_point_four])
 cv2.imshow('a2',img3)
 cv2.waitKey(0)
